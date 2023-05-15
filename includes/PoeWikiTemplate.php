@@ -9,6 +9,7 @@ class PoeWikiTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
+		$nspace = array_keys($this->data['content_navigation']['namespaces'])[0];
 		$html = '';
 		$html .= $this->get( 'headelement' );
 
@@ -19,7 +20,7 @@ class PoeWikiTemplate extends BaseTemplate {
 				$this->getIndicators() .
 				Html::rawElement( 'h1',
 					[
-						'class' => 'firstHeading',
+						'class' => 'firstHeading ns-' . $nspace,
 						'lang' => $this->get( 'pageLanguage' )
 					],
 					$this->get( 'title' )

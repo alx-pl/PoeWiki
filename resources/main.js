@@ -1,1 +1,1 @@
-/* JavaScript for the Example skin */
+/* JavaScript for the PoeWiki skin */

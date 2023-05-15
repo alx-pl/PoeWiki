@@ -1,13 +1,13 @@
 <?php
 /**
- * SkinTemplate class for the Example skin
+ * SkinTemplate class for the PoeWiki skin
  *
  * @ingroup Skins
  */
-class SkinExample extends SkinTemplate {
-	public $skinname = 'example',
-		$stylename = 'Example',
-		$template = 'ExampleTemplate';
+class SkinPoeWiki extends SkinTemplate {
+	public $skinname = 'poewiki',
+		$stylename = 'PoeWiki',
+		$template = 'PoeWikiTemplate';
 
 	/**
 	 * Add CSS via ResourceLoader
@@ -21,10 +21,10 @@ class SkinExample extends SkinTemplate {
 		);
 
 		$out->addModuleStyles( [
-			'skins.example'
+			'skins.poewiki'
 		] );
 		$out->addModules( [
-			'skins.example.js'
+			'skins.poewiki.js'
 		] );
 	}
 

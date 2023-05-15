@@ -1,25 +1,25 @@
 {
-	"name": "Example",
-	"version": "1.0",
-	"author": "...",
+	"name": "PoeWiki",
+	"version": "0.1",
+	"author": "Alx Miłosz Biedrzycki",
 	"url": "https://www.mediawiki.org/wiki/Skin:Example",
-	"descriptionmsg": "example-desc",
-	"namemsg": "skinname-example",
+	"descriptionmsg": "poewiki-desc",
+	"namemsg": "skinname-poewiki",
 	"license-name": "CC0-1.0",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"
 	},
 	"ValidSkinNames": {
-		"example": "Example"
+		"poewiki": "PoeWiki"
 	},
 	"MessagesDirs": {
-		"Example": [
+		"PoeWiki": [
 			"i18n"
 		]
 	},
 	"ResourceModules": {
-		"skins.example": {
+		"skins.poewiki": {
 			"class": "ResourceLoaderSkinModule",
 			"features": [
 				"normalize",
@@ -43,7 +43,7 @@
 				}
 			}
 		},
-		"skins.example.js": {
+		"skins.poewiki.js": {
 			"scripts": [
 				"resources/main.js"
 			]
@@ -51,16 +51,16 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Example"
+		"remoteSkinPath": "PoeWiki"
 	},
 	"ResourceModuleSkinStyles": {
-		"example": {
+		"poewiki": {
 			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
 		}
 	},
 	"AutoloadClasses": {
-		"SkinExample": "includes/SkinExample.php",
-		"ExampleTemplate": "includes/ExampleTemplate.php"
+		"SkinPoeWiki": "includes/SkinPoewiki.php",
+		"PoeWikiTemplate": "includes/PoeWikiTemplate.php"
 	},
 	"manifest_version": 1
 }

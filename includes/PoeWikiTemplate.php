@@ -1,10 +1,10 @@
 <?php
 /**
- * BaseTemplate class for the Example skin
+ * BaseTemplate class for the PoeWiki skin
  *
  * @ingroup Skins
  */
-class ExampleTemplate extends BaseTemplate {
+class PoeWikiTemplate extends BaseTemplate {
 	/**
 	 * Outputs the entire contents of the page
 	 */

@@ -59,7 +59,7 @@
 		}
 	},
 	"AutoloadClasses": {
-		"SkinPoeWiki": "includes/SkinPoewiki.php",
+		"SkinPoeWiki": "includes/SkinPoeWiki.php",
 		"PoeWikiTemplate": "includes/PoeWikiTemplate.php"
 	},
 	"manifest_version": 1

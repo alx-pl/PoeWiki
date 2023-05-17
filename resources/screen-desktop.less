@@ -13,3 +13,108 @@
 		display: inline-block;
 	}
 }
+
+/*
+ ** the personal toolbar
+ *  location at the top
+*/
+#p-personal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	width: 100%;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	overflow: visible;
+	line-height: 1.2em;
+}
+
+#p-personal h3 {
+	position: absolute;
+	top: -9999px;
+}
+
+#p-personal .portlet,
+#p-personal .pBody {
+	z-index: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: visible;
+	background: none;
+}
+
+/* this is the ul contained in the portlet */
+#p-personal ul {
+	border: 0;
+	line-height: 1.4em;
+	color: #2f6fab;
+	padding: 0;
+	padding-right: 2em;
+	/* Avoid overlap with the logo. */
+	padding-left: 14em;
+	margin: 0;
+	float: right;
+	list-style-type: none;
+	list-style-image: none;
+	z-index: 0;
+	background: none;
+	cursor: default;
+	text-transform: lowercase;
+	box-sizing: border-box;
+	max-width: 80%;
+}
+
+#p-personal li {
+	z-index: 0;
+	border: 0;
+	padding: 0;
+	color: #2f6fab;
+	display: inline;
+	margin-left: 1em;
+	line-height: 1.2em;
+	background: none;
+}
+
+#p-personal li a {
+	color: #005896;
+	text-decoration: none;
+	padding-bottom: 0.2em;
+}
+
+#p-personal li a:hover {
+	background-color: #fff;
+	text-decoration: none;
+}
+
+#p-personal li.active a:hover {
+	background-color: transparent;
+}
+
+/* Don't lowercase username */
+li#pt-userpage {
+	text-transform: none;
+}
+
+.mw-editsection {
+    float: right;
+    font-size: small;
+}
+
+.mw-editsection-bracket {
+    .hidden;
+}
+
+
+#mw-navigation {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width: 13em;
+        
+}
+

@@ -4,33 +4,51 @@
 
 // Page layout
 
+// Box with the whole content
 #mw-wrapper {
 	max-width: @width;
 	margin: 0 auto;
 	position: relative;
 	padding: 1em;
+	margin: 1em;
 }
 
+/* From Monobook */
 #p-logo {
-	text-align: center;
-	width: 10em;
-	float: right;
+	position: absolute;
+	z-index: 3;
+	overflow: visible;
 
-	// Make logo image visible
-	// The class sets the background image from $wgLogo, but we still need to give it a size in order to show up
-	a.mw-wiki-logo {
+	a,
+	a:hover {
 		display: block;
-		content: '';
-		width: 10em;
-		height: 10em;
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		text-decoration: none;
 	}
 }
+
+
+//#p-logo {
+//	text-align: center;
+//	width: 10em;
+//	float: right;
+//
+//	// Make logo image visible
+//	// The class sets the background image from $wgLogo, but we still need to give it a size in order to show up
+//	a.mw-wiki-logo {
+//		display: block;
+//		content: '';
+//		width: 10em;
+//		height: 10em;
+//		background-repeat: no-repeat;
+//		background-position: 50% 50%;
+//	}
+//}
 
 .mw-body {
 	position: relative;
 	word-wrap: break-word;
+	margin-left: 14em; //width for left menu
 }
 
 // Some content stuff
@@ -54,10 +72,8 @@ pre {
 	text-align: center;
 }
 
-// Splatter the menus and tools at the bottom
-.mw-footer,
-#page-tools,
-#p-personal {
+// Splatter footer at the bottom
+.mw-footer {
 	margin: 1em 0;
 
 	ul {
@@ -71,9 +87,6 @@ pre {
 	}
 }
 
-#page-tools .mw-portlet {
-	display: inline-block;
-}
 
 #mw-navigation {
 	margin: 1em 0;
@@ -96,17 +109,22 @@ pre {
 }
 
 // hidden stuff
-#page-tools h3,
-#p-search h3,
-#p-personal h3 {
-	.hidden;
+//#page-tools h3,
+//#p-search h3,
+//#p-personal h3 {
+//	.hidden;
+//}
+
+// All section headers should be in bold
+h1, h2, h3, h4, h5, h6 {
+         font-weight: bold;
 }
 
 h1 { font-size: 135% } 
 h1.firstHeading { font-size: 200%; color: #479; border-bottom: 3px solid #479 }
 h1.firstHeading.ns-user { font-size: 200%; color: #a33; border-bottom: 3px solid #a33 }
 h1.pagetitle_notartpage { font-size: 200%; color: #386; border-bottom: 3px solid #386 }
-h2 { font-size: 120%; }
+h2 { font-size: 120%;   }
 h3, h4, h5, h6 { margin-bottom: 0;}
 h3 { font-size: 110%; }
 h4 { font-size: 100%; }

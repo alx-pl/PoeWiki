@@ -1,8 +1,11 @@
 PoeWiki skin
 
-This is an example skin showcasing the best practices, a companion to the
-MediaWiki skinning guide available at
-<https://www.mediawiki.org/wiki/Manual:Skinning>.
+PoeWiki skin is a skin developed to provide old school look-and-feel of PoeWiki
+in modern computational setting of MediaWiki 1.35+.
+
+This skin is based upon the Example skin, which is showcasing the best practices,
+of MediaWiki skin construction and is a companion to the MediaWiki skinning guide
+available at <https://www.mediawiki.org/wiki/Manual:Skinning>.
 
 The code is released into public domain, which means you can freely copy it,
 modify and release as your own skin without providing attribution and with

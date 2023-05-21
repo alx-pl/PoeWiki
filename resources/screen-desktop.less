@@ -23,13 +23,15 @@
 	left: 0;
 	top: 0;
 	z-index: 3;
-	width: 100%;
+	width: 100vw;
+	height: 3em;
 	white-space: nowrap;
 	padding: 0;
 	margin: 0;
 	border: 0;
 //	background: none;
-	background: #eeeeee;
+//	background: #eee;
+	background: transparent;
 	overflow: visible;
 	line-height: 1.2em;
 	float: right;
@@ -129,11 +131,32 @@ li#pt-userpage {
 }
 
 #p-logo, #p-search, #page-tools, #site-navigation {
+    position: relative;
     width: @leftmenu;
     max-width: @leftmenu;
     margin-right: 1em;
 }
 
+/*
+** Logo properties
+*/
+#p-logo {
+        top: 0;
+        left: 0;
+        height: 155px;
+        width: 12em;
+}
+
+#p-logo a,
+#p-logo a:hover {
+        height: 155px;
+//        width: 12.2em;
+//        background-position: 35% 50% !important; /* stylelint-disable-line declaration-no-important */
+}
+
+#p-search {
+	top: 1em;
+}
 
 // All section headers should be in bold
 h1, h2, h3, h4, h5, h6 {

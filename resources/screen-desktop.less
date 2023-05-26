@@ -3,6 +3,8 @@
 @import 'variables.less';
 
 #site-navigation {
+	position: absolute;
+        top: -2.5em;
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -131,7 +133,6 @@ li#pt-userpage {
 }
 
 #p-logo, #p-search, #page-tools, #site-navigation {
-    position: relative;
     width: @leftmenu;
     max-width: @leftmenu;
     margin-right: 1em;
@@ -159,7 +160,8 @@ li#pt-userpage {
 }
 
 #page-tools {
-        top: 105px;
+	position: absolute;
+        top: 117px;
         margin: 0;
         padding: 0;
         ul {

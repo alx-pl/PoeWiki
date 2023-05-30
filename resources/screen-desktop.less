@@ -234,7 +234,18 @@ a.mw-wiki-title {
 
 #catlinks li {
         display: inline-block;
+        margin: 0.1em;
 }
+
+#catlinks li::after {
+        content: "|";
+        margin-left: 0.2em;
+}
+
+#catlinks li:last-child::after {
+        content: "";
+}
+
 
 .mw-body-content {
 	margin-top: 2em;

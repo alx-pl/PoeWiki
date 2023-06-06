@@ -9,8 +9,8 @@
 	max-width: @width;
 	margin: 0 auto;
 	position: relative;
-	padding: 0em;
-	margin: 0.5em;
+	padding: 0;
+	margin: 0;
 }
 
 /* From Monobook */
@@ -45,6 +45,10 @@
 //	}
 //}
 
+.mediawiki {
+	font-size: 1.2vw;
+}
+
 .mw-body {
 	position: relative;
 	word-wrap: break-word;
@@ -76,8 +80,10 @@ pre {
 
 // Splatter footer at the bottom
 .mw-footer {
-	margin: 1em 0;
-
+	margin: 1em 0 1em @leftmenu;
+        padding: 4px; 
+        clear: both; 
+        font-size:95%;
 	ul {
 		list-style-type: none;
 		margin: 0;

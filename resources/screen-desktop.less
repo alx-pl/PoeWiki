@@ -124,7 +124,7 @@ li#pt-userpage {
     left: 0px;
     top: 0px;
     width: 100%;
-    font-size: 95%;
+    font-size: 96%;
     max-width: 100%;
 }
 
@@ -135,7 +135,8 @@ li#pt-userpage {
 #p-logo, #p-search, #page-tools, #site-navigation {
     width: @leftmenu;
     max-width: @leftmenu;
-    margin-right: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 /*
@@ -162,8 +163,6 @@ li#pt-userpage {
 #page-tools {
 	position: absolute;
         top: 117px;
-        margin: 0;
-        padding: 0;
         ul {
                 margin: 0;
         }
@@ -220,9 +219,9 @@ a.mw-wiki-title {
 //Category at the top
 #catlinks {
         position: absolute;
-        top: 4.5em;
+        top: 7.5em;
         right: 0;
-        font-size: small;
+        font-size: smaller;
 	border: 0;
 	background-color: unset;
 }
@@ -248,11 +247,12 @@ a.mw-wiki-title {
 
 
 .mw-body-content {
-	margin-top: 2em;
+	margin-top: 3em;
 }
 
 // Padding around article pages
-#content { padding: 4px 20px 4px 4px; }
+#content { padding: 4px 0px 4px 4px; 
+           margin: 2em 0 0 @leftmenu; }
 
 
 // All section headers should be in bold

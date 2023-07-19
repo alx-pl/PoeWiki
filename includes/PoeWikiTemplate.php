@@ -8,13 +8,15 @@ class PoeWikiTemplate extends BaseTemplate {
 
         private function add_related() {
 		$nspcs = $this->data['content_navigation']['namespaces'];
-		foreach ($nspcs as $key => $val) {
-			if (strcmp($val['class'], 'selected') != 0) {
-		 		$this->data['content_navigation']['views']['other'] = [
-                                                'class' => 'related',
-                                                'text' => $val['text'],
-                                                'href' => $val['href'],
-				];
+		if (array_key_exists('user', $nspcs)) {
+			foreach ($nspcs as $key => $val) {
+				if (strcmp($val['class'], 'selected') != 0) {
+			 		$this->data['content_navigation']['views']['other'] = [
+                        	                        'class' => 'related',
+                                	                'text' => $val['text'],
+                                        	        'href' => $val['href'],
+					];
+				}
 			}
 		}
 	}

@@ -3,8 +3,8 @@
 @import 'variables.less';
 
 #site-navigation {
-	position: absolute;
-        top: 12em;
+	position: relative;
+        top: 0.5em;
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -14,6 +14,11 @@
 		padding-right: 1em;
 		display: inline-block;
 	}
+}
+
+#p-navigation {
+	position: relative;
+        top: -@topmostmargin;
 }
 
 /*
@@ -143,7 +148,7 @@ li#pt-userpage {
 ** Logo properties
 */
 #p-logo {
-        top: -2.6em;
+        top: -@topmostmargin;
         left: 0;
         height: 135px;
         width: 12em;
@@ -161,8 +166,8 @@ li#pt-userpage {
 }
 
 #page-tools {
-	position: absolute;
-        top: 117px;
+	position: relative;
+        top: -@topmostmargin;
         ul {
                 margin: 0;
         }
@@ -204,15 +209,15 @@ a.mw-wiki-title {
 
 
 #p-search {
-	position: absolute;
-	top: 26em;
+	position: relative;
+	top: -@topmostmargin-a;
 }
 #p-tb-label {
         .hidden;
 }
 #p-tb {
-        position: absolute;
-        top: 21em;
+        position: relative;
+        top: -@topmostmargin;
 }
 
 
@@ -252,7 +257,7 @@ a.mw-wiki-title {
 
 // Padding around article pages
 #content { padding: 4px 0px 4px 4px; 
-           margin: 2em 0 0 @leftmenu; }
+           margin: @topmostmargin 0 0 @leftmenu; }
 
 
 // All section headers should be in bold

@@ -5,6 +5,20 @@
  * @ingroup Skins
  */
 class PoeWikiTemplate extends BaseTemplate {
+
+        private function add_related() {
+		$nspcs = $this->data['content_navigation']['namespaces'];
+		foreach ($nspcs as $key => $val) {
+			if (strcmp($val['class'], 'selected') != 0) {
+		 		$this->data['content_navigation']['views']['other'] = [
+                                                'class' => 'related',
+                                                'text' => $val['text'],
+                                                'href' => $val['href'],
+				];
+			}
+		}
+	}
+
 	/**
 	 * Outputs the entire contents of the page
 	 */
@@ -12,6 +26,8 @@ class PoeWikiTemplate extends BaseTemplate {
 		$nspace = array_keys($this->data['content_navigation']['namespaces'])[0];
 		$html = '';
 		$html .= $this->get( 'headelement' );
+		$this->add_related();
+
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
@@ -54,13 +70,6 @@ class PoeWikiTemplate extends BaseTemplate {
 					$this->getMsg( 'navigation-heading' )->parse()
 				) .
 				$this->getLogo() .
-				$this->getSearch() .
-				// User profile links
-				Html::rawElement(
-					'div',
-					[ 'id' => 'user-tools' ],
-					$this->getUserLinks()
-				) .
 				// Page editing and tools
 				Html::rawElement(
 					'div',
@@ -72,6 +81,13 @@ class PoeWikiTemplate extends BaseTemplate {
 					'div',
 					[ 'id' => 'site-navigation' ],
 					$this->getSiteNavigation()
+				) .
+				$this->getSearch() .
+				// User profile links
+				Html::rawElement(
+					'div',
+					[ 'id' => 'user-tools' ],
+					$this->getUserLinks()
 				)
 			) .
 			$this->getFooterBlock()

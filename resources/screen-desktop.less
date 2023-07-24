@@ -131,6 +131,7 @@ li#pt-userpage {
     width: 100%;
     font-size: 96%;
     max-width: 100%;
+    z-index: 0;
 }
 
 #searchInput {
@@ -257,7 +258,10 @@ a.mw-wiki-title {
 
 // Padding around article pages
 #content { padding: 4px 0px 4px 4px; 
-           margin: @topmostmargin 0 0 @leftmenu; }
+	   width: ~"calc(100% - 135px - 2em)";
+           margin: @topmostmargin 0 0 0; 
+	   left: @leftmenu;
+   }
 
 
 // All section headers should be in bold

@@ -1,11 +1,11 @@
 {
 	"name": "PoeWiki",
 	"version": "0.1",
-	"author": "Alx Miłosz Biedrzycki",
-	"url": "https://www.mediawiki.org/wiki/Skin:Example",
+	"author": "Alx, Miłosz Biedrzycki",
+	"url": "https://github.com/alx-pl/PoeWiki",
 	"descriptionmsg": "poewiki-desc",
 	"namemsg": "skinname-poewiki",
-	"license-name": "CC0-1.0",
+	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"

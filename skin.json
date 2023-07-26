@@ -58,6 +58,9 @@
 			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
 		}
 	},
+	"Hooks": {
+		"ArticleEditUpdatesDeleteFromRecentchanges": "SkinPoeWiki::onArticleEditUpdatesDeleteFromRecentchanges"
+	},
 	"AutoloadClasses": {
 		"SkinPoeWiki": "includes/SkinPoeWiki.php",
 		"PoeWikiTemplate": "includes/PoeWikiTemplate.php"

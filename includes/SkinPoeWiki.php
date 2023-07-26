@@ -34,4 +34,8 @@ class SkinPoeWiki extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 	}
+
+//	public static function onArticleEditUpdatesDeleteFromRecentchanges( Wikipage &$wikiPage ) { 
+//		return false;
+//	}
 }

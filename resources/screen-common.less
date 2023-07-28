@@ -4,6 +4,19 @@
 
 // Page layout
 
+// Global settings
+.mediawiki {
+	background-color: #FFF;
+}
+
+.mw-body {
+	position: relative;
+	word-wrap: break-word;
+	font-size: normal;
+	margin-left: @leftmenu; //width for left menu
+	z-index: 1;
+}
+
 // Box with the whole content
 #mw-wrapper {
 	max-width: @width;
@@ -12,6 +25,8 @@
 	padding: 0;
 	margin: 0;
 }
+
+
 
 /* From Monobook */
 #p-logo {
@@ -45,18 +60,6 @@
 //	}
 //}
 
-// Global settings
-.mediawiki {
-	background-color: #FFF;
-}
-
-.mw-body {
-	position: relative;
-	word-wrap: break-word;
-	font-size: normal;
-	margin-left: @leftmenu; //width for left menu
-	z-index: 1;
-}
 
 // Some content stuff
 .firstHeading {
@@ -141,4 +144,8 @@ pre {
 // hide print footer
 .printfooter {
     .hidden;
+}
+
+.mw-body-content > #contentSub {
+	margin: 0 0 0 0;
 }

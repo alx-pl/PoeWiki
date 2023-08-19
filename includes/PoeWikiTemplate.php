@@ -638,7 +638,7 @@ class PoeWikiTemplate extends BaseTemplate {
 		$html .= Html::rawElement(
 					'div',
 					[ 'id' => 'footer-navigation' ],
-					$this->getFooterNavigation()
+					$this->getFooterNavigation() //TODO: document
 				);
 
 		$iconsHTML = '';
@@ -703,7 +703,7 @@ class PoeWikiTemplate extends BaseTemplate {
 			$html .= $linksHTML . $iconsHTML;
 		}
 
-		$html .= $this->get( 'pageend' ) . " ";
+		$html .= $this->getMsg( 'pageend' ) . " ";
 		$html .= Html::element( 'a',
                                 [
                                         'href' => '',

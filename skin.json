@@ -59,11 +59,13 @@
 		}
 	},
 	"Hooks": {
-		"ArticleEditUpdatesDeleteFromRecentchanges": "SkinPoeWiki::onArticleEditUpdatesDeleteFromRecentchanges"
+		"ArticleEditUpdatesDeleteFromRecentchanges": "SkinPoeWiki::onArticleEditUpdatesDeleteFromRecentchanges",
+		"SkinAddFooterLinks": "PoeWikiHooks::onSkinAddFooterLinks"
 	},
 	"AutoloadClasses": {
 		"SkinPoeWiki": "includes/SkinPoeWiki.php",
-		"PoeWikiTemplate": "includes/PoeWikiTemplate.php"
+		"PoeWikiTemplate": "includes/PoeWikiTemplate.php",
+		"PoeWikiHooks": "includes/PoeWikiHooks.php"
 	},
 	"manifest_version": 1
 }

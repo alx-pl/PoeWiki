@@ -216,6 +216,40 @@ class PoeWikiTemplate extends BaseTemplate {
 		return $html;
 	}
 
+	protected function getFooterNavigation() {
+		$html = '';
+
+		$sidebar = $this->getSidebar();
+		$sidebar['SEARCH'] = false;
+		$sidebar['TOOLBOX'] = true;
+		$sidebar['LANGUAGES'] = true;
+
+		foreach ( $sidebar as $name => $content ) {
+			if ( $content === false ) {
+				continue;
+			}
+			// Numeric strings gets an integer when set as key, cast back - T73639
+			$name = (string)$name;
+
+			switch ( $name ) {
+				case 'SEARCH':
+					$html .= $this->getSearch();
+					break;
+				case 'TOOLBOX':
+					$html .= $this->getPortlet( 'tb', $this->getToolbox(), 'toolbox' );
+					break;
+				case 'LANGUAGES':
+					$html .= $this->getLanguageLinks();
+					break;
+				default:
+					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+					$html .= $this->getPortlet( $name, $content['content'] );
+					break;
+			}
+		}
+		return $html;
+	}
+
 	/**
 	 * In other languages list
 	 *
@@ -596,6 +630,17 @@ class PoeWikiTemplate extends BaseTemplate {
 			'dir' => $this->get( 'dir' )
 		] );
 
+		$html .= Html::rawElement(
+					'div',
+					[ 'id' => 'footer-page-tools' ],
+					$this->getPageLinks()
+				);
+		$html .= Html::rawElement(
+					'div',
+					[ 'id' => 'footer-navigation' ],
+					$this->getFooterNavigation()
+				);
+
 		$iconsHTML = '';
 		if ( count( $validFooterIcons ) > 0 ) {
 			$iconsHTML .= Html::openElement( 'ul', [ 'id' => "{$options['link-prefix']}-icons" ] );
@@ -657,6 +702,15 @@ class PoeWikiTemplate extends BaseTemplate {
 		} else {
 			$html .= $linksHTML . $iconsHTML;
 		}
+
+		$html .= $this->get( 'pageend' ) . " ";
+		$html .= Html::element( 'a',
+                                [
+                                        'href' => '',
+                                        'rel' => 'noreferrer noopener' // not required, but recommended for security reasons
+				], 
+				$this->getMsg( 'jumpuptext' )->text()
+		); 
 
 		$html .= $this->getClear() . Html::closeElement( 'div' );
 

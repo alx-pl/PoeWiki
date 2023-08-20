@@ -219,34 +219,10 @@ class PoeWikiTemplate extends BaseTemplate {
 	protected function getFooterNavigation() {
 		$html = '';
 
-		$sidebar = $this->getSidebar();
-		$sidebar['SEARCH'] = false;
-		$sidebar['TOOLBOX'] = true;
-		$sidebar['LANGUAGES'] = true;
-
-		foreach ( $sidebar as $name => $content ) {
-			if ( $content === false ) {
-				continue;
-			}
-			// Numeric strings gets an integer when set as key, cast back - T73639
-			$name = (string)$name;
-
-			switch ( $name ) {
-				case 'SEARCH':
-					$html .= $this->getSearch();
-					break;
-				case 'TOOLBOX':
-					$html .= $this->getPortlet( 'tb', $this->getToolbox(), 'toolbox' );
-					break;
-				case 'LANGUAGES':
-					$html .= $this->getLanguageLinks();
-					break;
-				default:
-					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-					$html .= $this->getPortlet( $name, $content['content'] );
-					break;
-			}
-		}
+		$bar = [];
+		$this->getSkin()->addToSidebar($bar, 'foottools');
+		$html .= $this->getPortlet( 'foottools', $bar['foottools'], 'Foot tools');
+		$html .= $this->getSearch();
 		return $html;
 	}
 

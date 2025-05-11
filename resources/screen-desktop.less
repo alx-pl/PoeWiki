@@ -76,7 +76,6 @@
 	z-index: 0;
 	background: none;
 	cursor: default;
-	text-transform: lowercase;
 	box-sizing: border-box;
 }
 
@@ -86,9 +85,16 @@
 	padding: 0;
 	color: #2f6fab;
 	display: inline;
-	margin-left: 1em;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
 	line-height: 1.2em;
 	background: none;
+}
+
+#p-personal :not(:last-child):after {
+	color: #000000;
+	content: "|";
+	margin-left: 0.2em;
 }
 
 #p-personal li a {

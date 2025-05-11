@@ -3,5 +3,6 @@
 		"authors": [ "..." ]
 	},
 	"skinname-poewiki": "{{optional}}",
-	"poewiki-desc": "{{desc|what=skin|name=PoeWiki|url=https://www.mediawiki.org/wiki/Skin:Example}}"
+	"poewiki-desc": "{{desc|what=skin|name=PoeWiki|url=https://www.mediawiki.org/wiki/Skin:Example}}",
+	"poewiki-help-content": "Pomoc:Spis treści"
 }

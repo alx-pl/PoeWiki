@@ -4,6 +4,8 @@
  *
  * @ingroup Skins
  */
+#use MediaWiki\Title\Title;
+
 class PoeWikiTemplate extends BaseTemplate {
 
         private function add_related() {
@@ -291,6 +293,14 @@ class PoeWikiTemplate extends BaseTemplate {
 	 * @return string html
 	 */
 	protected function getUserLinks() {
+		if (!array_key_exists('help', $this->data['personal_urls'])) {
+			$title = Title::newFromText( wfMessage( 'poewiki-help-content' )->text() );
+			$this->data['personal_urls']['help'] = [
+				'text' => wfMessage( 'help' )->text(),
+				'href' => $title->getLocalURL(),
+				'active' => false
+			];
+		}
 		// Basic list output
 		return $this->getPortlet(
 			'personal',
